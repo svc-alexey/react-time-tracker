@@ -1,0 +1,58 @@
+@import './style/zeroing.css';
+/*---Fonts---*/
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/Roboto-Regular.woff2);
+  font-display: fallback;
+  font-weight: normal;
+  font-style: 400;
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url(fonts/Roboto-Medium.woff2);
+  font-display: fallback;
+  font-weight: medium;
+  font-style: 600;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url(fonts/Roboto-Bold.woff2);
+  font-display: fallback;
+  font-weight: bold;
+  font-style: 700;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/Roboto-Regular.woff);
+  font-display: fallback;
+  font-weight: normal;
+  font-style: 400;
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url(fonts/Roboto-Medium.woff);
+  font-display: fallback;
+  font-weight: medium;
+  font-style: 600;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url(fonts/Roboto-Bold.woff);
+  font-display: fallback;
+  font-weight: bold;
+  font-style: 700;
+}
+
+body {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: 400;
+  font-size: 16px;
+}
+
+/*--------------------*/

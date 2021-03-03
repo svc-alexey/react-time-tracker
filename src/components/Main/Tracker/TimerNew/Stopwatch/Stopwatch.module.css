@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.issue {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 14px;
+}
+
+.label {
+    font-size: 18px;
+    line-height: 26px;
+    color: #828282;
+    margin-bottom: 11px;
+}
+
+.stopwatch {
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 78px;
+    color: #1e1e1e;
+    margin-bottom: 25px;
+}
+
+input {
+    background-color: #f9fafc;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    display: block;
+    position: relative;
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.stopBtn {
+    background-color: #eb5757;
+    margin-right: 22px;
+}
+
+.stopBtn::after {
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+}
+
+.pauseBtn {
+    background-color: #3744bd;
+    position: relative;
+    z-index: 10;
+}
+
+.pauseBtn::before {
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translateX(-60%) translateY(-50%);
+    width: 5.05px;
+    height: 16.42px;
+    border-radius: 3px;
+}
+
+.pauseBtn::after {
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 5.05px;
+    height: 16.42px;
+    border-radius: 3px;
+}

@@ -1,0 +1,50 @@
+
+.dateSorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sorting {
+  line-height: 26px;
+  font-size: 18px;
+  padding: 10px 27px;
+  color: #bbbbbb;
+}
+
+.sortingActive {
+  background-color: #f0f3f5;
+  border-radius: 30px;
+  color: #4f4f4f;
+}
+
+.data {
+  text-transform: uppercase;
+  background-color: #f0f3f5;
+  color: #3744bd;
+  display: flex;
+  line-height: 26px;
+  font-size: 18px;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 30px;
+}
+
+.changeData {
+  margin-right: 18px;
+  background-color: #F0F3F5;
+  color: #3744BD;
+}
+
+.calendar{
+  position: absolute;
+  top: 7vh;
+  z-index: 1000;
+}
+
+.calendarWrapper{
+  position: absolute;
+  top: 5rem;
+  z-index: 100;
+}

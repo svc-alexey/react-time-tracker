@@ -1,0 +1,72 @@
+.tracking {
+    border-left: 1px solid #e9ecf2;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 38px;
+}
+
+.buttonBurger {
+    width: 30px;
+    height: 24px;
+    background-color: #fff;
+}
+
+.burgerSpan {
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #c4cacb;
+    content: '';
+}
+
+.burgerSpan::before {
+    display: block;
+    position: absolute;
+    left: -10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #c4cacb;
+    content: '';
+}
+
+.burgerSpan::after {
+    display: block;
+    position: absolute;
+    left: 10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #c4cacb;
+    content: '';
+}
+
+.burgerMenu {
+    position: absolute;
+    font-size: 16px;
+    line-height: 23px;
+    color: #4f4f4f;
+    background: #ffffff;
+    box-shadow: 0px 15px 30px rgba(216, 226, 232, 0.12);
+    border-radius: 10px;
+    white-space: nowrap;
+    left: 84%;
+}
+
+li {
+    padding: 18px 32px;
+}
+
+li:hover {
+    background-color: #e3f3ff;
+}

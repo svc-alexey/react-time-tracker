@@ -1,0 +1,199 @@
+.issue {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.issueItems {
+    display: flex;
+    align-items: center;
+    padding: 7px 30px;
+    border-bottom: 1px dashed #e9ecf2;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.issueItemsActive {
+    background-color: #FFFFFF;
+    box-shadow: 0px 15px 30px rgba(216, 226, 232, 0.12);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 7px 30px;
+    position: relative;
+    z-index: 3;
+    flex: 1 1 auto;
+}
+
+.time {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #bbbbbb;
+}
+
+.time > strong {
+    color: #1e1e1e;
+}
+
+.indicatorMissed {
+    content: '';
+    width: 3.25px;
+    height: 76px;
+    border-radius: 1px;
+    margin: 0 28px;
+    background-color: #e34040;
+}
+
+.indicatorComplite {
+    content: '';
+    width: 3.25px;
+    height: 76px;
+    border-radius: 1px;
+    margin: 0 28px;
+    background-color: #62d2b1;
+}
+
+.indicatorProcess {
+    content: '';
+    width: 3.25px;
+    height: 76px;
+    border-radius: 1px;
+    margin: 0 28px;
+    background-color: #ffcc40;
+}
+
+.name {
+    flex: 1 1 auto;
+}
+
+.label {
+    font-size: 18px;
+    line-height: 26px;
+    color: #828282;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #1e1e1e;
+}
+
+.progress {
+    width: 106px;
+    height: 4px;
+    content: '';
+    margin-right: 49px;
+}
+
+.progressMissed {
+    display: block;
+    content: '';
+    margin-right: 49px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #f0f3f5;
+}
+
+.progressComplite {
+    display: block;
+    content: '';
+    height: 100%;
+    background-color: #62d2b1;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.progressInprocess {
+    display: block;
+    content: '';
+    height: 100%;
+    background-color: #ffcc40;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 45%;
+}
+
+.timer {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #bbbbbb;
+    margin-right: 36px;
+}
+
+.playButton {
+    width: 38px;
+    height: 38px;
+    background-color: #e9ecf2;
+    border-radius: 50%;
+}
+
+.activeBar {
+    position: absolute;
+    left: 98%;
+    width: 58px;
+    height: 86px;
+    background-color: #3744BD;
+    border-radius: 0px 10px 10px 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.burger {
+    width: 22px;
+    height: 22px;
+    background-color: #3744BD;
+}
+
+.burger > span {
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+    top: 35px;
+}
+
+.burger > span::before {
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+    top: 10px;
+}
+
+.burgerMenu {
+    width: 169px;
+    font-size: 16px;
+    line-height: 23px;
+    color: #4F4F4F;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 30px rgba(216, 226, 232, 0.12);
+    border-radius: 10px;
+    white-space: nowrap;
+    z-index: 5;
+    position: relative;
+    left: -140px;
+    top: 65px
+}
+
+li {
+    padding: 18px 32px;
+}
+
+li:hover {
+  border-radius: 5px;
+    background-color: #E3F3FF;
+}

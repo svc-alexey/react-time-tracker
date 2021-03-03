@@ -1,0 +1,24 @@
+.main {
+  background-color: #f9fafc;
+  padding: 52px 0 50px 0;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding-right: 92px;
+  padding-left: 61px;
+  margin: 0 auto;
+}
+.timeTracker {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 67px;
+}
+
+.allIssues {
+  display: flex;
+  flex-direction: column;
+}
+

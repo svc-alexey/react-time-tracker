@@ -1,0 +1,168 @@
+.wrapperWorklog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 41, 41, 0.2);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.worklogWindow {
+    width: 660px;
+    height: 470px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(216, 226, 232, 0.12);
+    background-color: #fff;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #1E1E1E;
+    padding: 30px 0 30px 56px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 29px 61px 0 56px;
+}
+.rangeSlider{
+    margin-bottom: 30px;
+}
+.range {
+    width: 543px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #F0F3F5;
+}
+
+.track {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #FFCC40;
+}
+
+
+.thumbDot {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FFCC40;
+}
+
+.thumbItem {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbItem > span {
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #FFCC40;
+}
+
+.thumb1 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-80%);
+}
+
+.thumb2 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-180%);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+.worklogInputs {
+    margin: 73px 0 44px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.worklogInputs input {
+    margin: 6px 0 22px 0;
+    border-bottom: 1px solid #E9ECF2;
+    background-color: #fff;
+}
+
+.worklogButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.acceptButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 7px 15px rgba(148, 156, 160, 0.13);
+    margin-right: 13.5px;
+}
+
+.declineButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #F9FAFC;
+    margin-left: 13.5px;
+}
+
+.accept {
+    width: 13.5px;
+    height: 9.75px;
+}
+
+.decline {
+    width: 18px;
+    height: 18px;
+}
+
+.input-range__label-container {
+    display: block;
+}

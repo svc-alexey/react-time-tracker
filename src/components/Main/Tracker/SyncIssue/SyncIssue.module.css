@@ -1,0 +1,34 @@
+.issue {
+  background-color: #f3f5f7;
+  border-radius: 10px;
+  display: flex;
+  padding: 28px 0 46px 0;
+  margin-bottom: 10px;
+}
+
+.indicator {
+  width: 3px;
+  height: 76px;
+  border-radius: 1px;
+  margin-top: 18px;
+  margin-right: 38px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #1e1e1e;
+}
+
+.indicatorblue{
+  background-color: #75e1f9;
+}
+
+.orange {
+  background-color: #f2994a;
+}
+
+.violet {
+  background-color: #8165f0;
+}
