@@ -19,7 +19,9 @@ const DateSorting = (props) => {
                 <img src={calendarLogo} alt='calendar'/>
             </div>
             <div className={s.calendarWrapper}>
-            {onCalendar ? <NewCalendar/> : null}
+                {onCalendar ? <div onMouseLeave={() => {
+                    setOnCalendar(!onCalendar)
+                }}><NewCalendar/></div> : null}
             </div>
             <div>
                 <NavLink to='/all' className={s.sorting} activeClassName={s.sortingActive}>All</NavLink>

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import s from './Issue.module.css';
 import play from '../../../../img/play.svg';
 import {useDispatch} from "react-redux";
-import {copyWorklog, deleteWorklog} from "../../../../store/reducers/issuesReducer";
+import {addFavorite, copyWorklog, deleteWorklog} from "../../../../store/reducers/issuesReducer";
 
 const Issue = (props) => {
     const [on, setOn] = useState(false);
@@ -29,6 +29,9 @@ const Issue = (props) => {
     }
     const copyIssues = () => {
         dispatch(copyWorklog(props.label, props.text));
+    }
+    const addFavoriteIssue = () => {
+        dispatch(addFavorite(props.id));
     }
 
     return (
@@ -57,7 +60,7 @@ const Issue = (props) => {
                         <li>Jira Link</li>
                         <li onClick={copyIssues}>Duplicate</li>
                         {props.isFavorite ? null :
-                        <li>Add to favorite</li>}
+                        <li onClick={addFavoriteIssue}>Add to favorite</li>}
                         <li onClick={deleteIssue}>Delete</li>
                     </ul> : null}
                 </button>

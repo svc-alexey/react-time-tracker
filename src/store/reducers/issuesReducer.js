@@ -1,7 +1,11 @@
+import {getToday} from "./dateReducer";
+
 const NEW_WORKLOG = 'NEW_WORKLOG';
 const DELETE_WORKLOG = 'DELETE_WORKLOG';
 const COPY_WORKLOG = 'COPY_WORKLOG';
 const SET_ACTIVE_TIMER = 'SET_ACTIVE_TIMER';
+const ADD_FAVORITE = 'ADD_FAVORITE';
+
 
 const initialState = {
     issues: [
@@ -13,7 +17,8 @@ const initialState = {
             label: 'JRM-310',
             name: 'Team standup',
             timer: '01:00:00',
-            id: 99
+            id: 99,
+            date: getToday()
         },
     ],
     favoriteIssues: [
@@ -33,6 +38,8 @@ const initialState = {
 
 export default function issuesReducer(state = initialState, action) {
     let issues = [...state.issues];
+    let favoriteIssues = [...state.favoriteIssues];
+
     switch (action.type) {
         case NEW_WORKLOG:
 
@@ -89,6 +96,9 @@ export default function issuesReducer(state = initialState, action) {
 
             let calculateId = getRandomArbitrary(0, 10);
 
+            let date = new Date();
+            let issuesDate = `${date.getFullYear()}${date.getMonth()}${date.getDay()}`;
+
             issues.push(
                 {
                     time: {
@@ -98,15 +108,14 @@ export default function issuesReducer(state = initialState, action) {
                     label: action.payload.label,
                     name: action.payload.issue,
                     timer: stopwatchTime,
-                    id: calculateId
+                    id: calculateId,
+                    date: issuesDate
                 });
             return {
                 ...state,
                 issues
             };
         case DELETE_WORKLOG:
-            debugger
-            let favoriteIssues = [...state.favoriteIssues];
             if (action.payload.isFavorite === true) favoriteIssues = favoriteIssues.filter(item => item.id !== action.payload.id);
             if (action.payload.isFavorite === false) issues = issues.filter(item => item.id !== action.payload.id);
             return {
@@ -127,6 +136,15 @@ export default function issuesReducer(state = initialState, action) {
                 ...state,
                 isActiveTimer: !state.isActiveTimer
             };
+        case ADD_FAVORITE:
+            let item = issues.map(item => item.id === action.payload.id ? {...item} : null).filter(item => item !== null);
+            favoriteIssues.push(...item);
+            console.log(favoriteIssues);
+            console.log(issues);
+            return {
+                ...state,
+                favoriteIssues
+            };
         default:
             return state;
     }
@@ -143,6 +161,6 @@ export const deleteWorklog = (id, isFavorite) => ({
 export const copyWorklog = (label, name) => ({
     type: COPY_WORKLOG, payload: {label, name}
 });
-export const setActiveTimer = () => ({
-    type: SET_ACTIVE_TIMER,
+export const addFavorite = (id) => ({
+    type: ADD_FAVORITE, payload: {id}
 });
